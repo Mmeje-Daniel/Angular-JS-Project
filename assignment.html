@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>AngularJs</title>
+    <script src="./angular-1.8.2/angular.min.js"></script>
+    <style>
+        div{
+            background-color:rgb(142, 166, 182);
+        }
+        body{
+            background-color: rgb(16, 99, 134);
+        }
+    </style>
+</head>
+<body>
+    <div data-ng-app="">
+        
+        
+
+    <input type="number" data-ng-model="qty" placeholder="input data"> 
+<p>
+  <h2> <span data-ng-model="price"> Price:   {{qty * 20000 | currency}}</span><br></h2>
+      <h2>  <span data-ng-model="Tax"> Tax Of 10%:    {{ 0.1 * (qty * 20000) | currency }}</span><br></h2>
+ <h2><span data-ng-model="price"> Total:    {{ (0.1 * qty *20000) + (qty * 20000) | currency }}</span> <br></h2>
+</p>
+    </div>
+</body>
+</html>
